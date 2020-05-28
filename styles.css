@@ -1,25 +1,3 @@
-
-p {
-    max-width: 1200px;
-    margin: auto;
-    text-align: justify;
-    font-size: 1.4em;
-    border: 6px dashed red;
-}
-
-
-.text-col {
-    column-count: auto;
-    column-width: 10em;
-    column-rule: 2px solid;
-    column-fill: balance;
-}
-
-.text-col-title {
-    display: block;
-    column-span: all;
-
-    text-align: center;
-    margin: 20px 0;
-    font-size: 3em;
-}
+@import url("assets/css/reset.css");
+/* !* */
+@import url("assets/css/fonts.css");
