@@ -1,0 +1,77 @@
+/*
+clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --background-value: linear-gradient(to bottom, #ffe76c, #ff5555);
+    min-height: 200vh;
+    background-image: var(--background-value);
+    background-position: top 0 ;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.profile-card {
+    margin: 20px;
+    --picture-size: 200px;
+    margin-top: calc(var(--picture-size) / 2);
+    width: 320px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture-wrapper {
+    --clip-path-value: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    background-image: var(--background-value);
+    background-attachment: fixed;
+    width: var(--picture-size);
+    height: var(--picture-size);
+    clip-path: var(--clip-path-value);
+    margin-top: calc(var(--picture-size) / -2);
+
+
+}
+
+.clipped-image {
+    width: calc(var(--picture-size) - 20px);
+    height: calc(var(--picture-size) - 20px);
+
+    object-fit: cover;
+    clip-path: var(--clip-path-value);
+}
+
+.filtered-image {
+    filter: grayscale(100%);
+}
+
+.filtered-image:hover {
+    filter: none;
+}
+
+.filtered-image:active {
+    filter: blur(10px);
+    cursor: grabbing;
+}
+
+.blurred-image {
+
+}
+
+.blurred-image:hover {
+    filter: none;
+}
